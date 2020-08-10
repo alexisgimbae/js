@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dia</title>
+    <meta name="description" content="Dia de la Semana" />
+  </head>
+
+  <body>
+    <p id="output"></p>
+    <img id="carita" />
+    <script type="text/javascript">
+      const dia = new Date().getDay();
+      function esFinDeSemana() {
+        return dia === 0 || dia === 6;
+      }
+      function queDía() {
+        const nombreDia = [
+          "Domingo",
+          "Lunes",
+          "Martes",
+          "Miércoles",
+          "Jueves",
+          "Viernes",
+          "Sábado",
+        ];
+        nombreDia.forEach((element) => {
+          console.log(element);
+        });
+        return nombreDia[dia];
+      }
+      const valorSrc = esFinDeSemana() ? "CaritaFeliz.png" : "CaritaTriste.png";
+      document.getElementById("carita").src = valorSrc;
+      document.getElementById("output").innerHTML = queDía();
+    </script>
+  </body>
+</html>
