@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+      <head>
+            <meta charset="utf-8" />
+            <meta name="keywords" content="metodo de objetos" />
+            <meta name="description" content="metodo de objetos en javascript" />
+            <meta name="Author" content="Alexis Gimenez" />
+            <title>Objectos</title>
+      </head>
+      <body>
+            <h1 id="demo">Prueba</h1>
+            <p id="demo"></p>
+
+            <button type="button" onclick="metodoDeObjetos()">demo</button>
+      <script type="text/javascript">
+            function metodoDeObjetos()
+            {
+                  const space = '\t';
+                  let casa = 
+                  {
+                        color : 'Rojo',
+                        direccion : 'Luque',
+                        // Metodos de objetos
+                        titulo : function mi_casa()
+                        {
+                              return this.color + space + this.direccion;
+                        }
+                  };
+
+                  document.getElementById('demo').innerHTML = casa.titulo();
+            }
+            
+      </script>
+      </body>
+</html>
